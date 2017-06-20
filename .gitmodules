@@ -1,0 +1,30 @@
+[submodule "external/PhysX"]
+	path = external/PhysX
+	url = https://github.com/NVIDIAGameWorks/PhysX-3.4.git
+[submodule "external/SDL"]
+	path = external/SDL
+	url = https://github.com/spurious/SDL-mirror.git
+[submodule "external/OpenAL-Soft"]
+	path = external/OpenAL-Soft
+	url = https://github.com/kcat/openal-soft.git
+[submodule "external/glslang"]
+	path = external/glslang
+	url = https://github.com/KhronosGroup/glslang.git
+[submodule "external/cmft"]
+	path = external/cmft
+	url = https://github.com/dariomanesku/cmft.git
+[submodule "external/luajit"]
+	path = external/luajit
+	url = https://github.com/LuaDist/luajit.git
+[submodule "external/assimp"]
+	path = external/assimp
+	url = https://github.com/assimp/assimp.git
+[submodule "external/context"]
+	path = external/context
+	url = https://github.com/septag/deboost.context.git
+[submodule "external/RecastDetour"]
+	path = external/RecastDetour
+	url = https://github.com/recastnavigation/recastnavigation.git
+[submodule "external/libvpx"]
+	path = external/libvpx
+	url = https://github.com/webmproject/libvpx.git
