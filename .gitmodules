@@ -28,3 +28,6 @@
 [submodule "external/libvpx"]
 	path = external/libvpx
 	url = https://github.com/webmproject/libvpx.git
+[submodule "external/nvidia-texture-tools"]
+	path = external/nvidia-texture-tools
+	url = https://github.com/castano/nvidia-texture-tools.git
