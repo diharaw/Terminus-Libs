@@ -87,3 +87,16 @@ cd projects
 # cd ..
 
 # xcodebuild -project "projects/OpenAL-Soft/OpenAL.xcodeproj" CONFIGURATION_BUILD_DIR="../../lib/Debug"  -configuration Debug build
+
+# ------------------------------------------------
+# Build libzip
+# ------------------------------------------------
+
+cd projects
+mkdir -p libzip
+cd libzip
+cmake -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ "../../external/libzip" -G "Xcode"
+cd ..
+cd ..
+
+xcodebuild -project "projects/libzip/libzip.xcodeproj" CONFIGURATION_BUILD_DIR="../../lib/Debug"  -configuration Debug build
