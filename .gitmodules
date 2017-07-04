@@ -34,6 +34,3 @@
 [submodule "external/libzip"]
 	path = external/libzip
 	url = https://github.com/diharaw/libzip.git
-[submodule "external/HLSLcc"]
-	path = external/HLSLcc
-	url = https://github.com/Unity-Technologies/HLSLcc.git
