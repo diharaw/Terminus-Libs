@@ -149,3 +149,28 @@ xcodebuild -project "projects/HLSLcc/HLSLcc.xcodeproj" -configuration Debug buil
 
 # Release
 xcodebuild -project "projects/HLSLcc/HLSLcc.xcodeproj" -configuration Release build
+
+# ------------------------------------------------
+# Build Recast Detour
+# ------------------------------------------------
+
+cd external/RecastDetour/RecastDemo
+premake5 xcode4
+
+cd ..
+cd ..
+cd ..
+
+# Debug
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/Detour.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Debug" -configuration Debug build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/Recast.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Debug" -configuration Debug build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/DetourCrowd.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Debug" -configuration Debug build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/DetourTileCache.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Debug" -configuration Debug build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/DebugUtils.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Debug" -configuration Debug build
+
+# Release
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/Detour.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Release" -configuration Release build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/Recast.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Release" -configuration Release build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/DetourCrowd.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Release" -configuration Release build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/DetourTileCache.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Release" -configuration Release build
+xcodebuild -project "external/RecastDetour/RecastDemo/Build/xcode4/DebugUtils.xcodeproj" CONFIGURATION_BUILD_DIR="../../../../../lib/Release" -configuration Release build
