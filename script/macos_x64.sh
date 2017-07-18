@@ -16,11 +16,11 @@ xcodebuild -project "external/PhysX/PhysX_3.4/Source/compiler/xcode_osx64/PhysX.
 
 mkdir -p projects
 rm -r projects/*
-cd projects
 
 # ------------------------------------------------
 # Build SDL
 # ------------------------------------------------
+cd projects
 mkdir -p SDL
 cd SDL
 cmake -DSDL_SHARED=OFF -DSDL_STATIC=ON -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ "../../external/SDL" -G "Xcode"
@@ -32,6 +32,22 @@ xcodebuild -project "projects/SDL/SDL2.xcodeproj" CONFIGURATION_BUILD_DIR="../..
 
 # Release
 xcodebuild -project "projects/SDL/SDL2.xcodeproj" CONFIGURATION_BUILD_DIR="../../lib/Release"  -configuration Release build
+
+# ------------------------------------------------
+# Build tinyxml2
+# ------------------------------------------------
+cd projects
+mkdir -p tinyxml2
+cd tinyxml2
+cmake -DBUILD_SHARED_LIBS=OFF -DBUILD_TESTS=OFF -DBUILD_STATIC_LIBS=ON -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ "../../external/tinyxml2" -G "Xcode"
+cd ..
+cd ..
+
+# Debug
+xcodebuild -project "projects/tinyxml2/tinyxml2.xcodeproj" CONFIGURATION_BUILD_DIR="../../lib/Debug"  -configuration Debug build
+
+# Release
+xcodebuild -project "projects/tinyxml2/tinyxml2.xcodeproj" CONFIGURATION_BUILD_DIR="../../lib/Release"  -configuration Release build
 
 # ------------------------------------------------
 # Build glslang
