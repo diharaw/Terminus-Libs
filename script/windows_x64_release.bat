@@ -1,10 +1,4 @@
 rem ---------------------------------------------------
-rem Build PhysX
-rem ---------------------------------------------------
-
-msbuild.exe "external/PhysX/PhysX_3.4/Source/compiler/vc14win64/PhysX.sln" /t:Build /p:OutDir="..\..\..\..\..\..\lib\release\PhysX" /p:Configuration="release"
-
-rem ---------------------------------------------------
 rem CMake Projects
 rem ---------------------------------------------------
 
@@ -81,17 +75,5 @@ cmake "../../external/assimp" -G "Visual Studio 14 Win64"
 cd ../..
 
 msbuild.exe "projects/assimp/assimp.sln" /t:Build /p:OutDir="..\..\lib\debug\assimp" /p:Configuration="debug"
-
-rem ---------------------------------------------------
-rem Build boost context
-rem ---------------------------------------------------
-
-mkdir projects/context
-cd projects/context
-cmake "../../external/context" -G "Visual Studio 14 Win64"
-cd ../..
-
-msbuild.exe "projects/context/context.sln" /t:Build /p:OutDir="..\..\lib\debug\context" /p:Configuration="debug"
-
 
 timeout /t -1
