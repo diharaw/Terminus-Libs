@@ -40,3 +40,6 @@
 [submodule "external/tinyxml2"]
 	path = external/tinyxml2
 	url = https://github.com/leethomason/tinyxml2.git
+[submodule "external/SPIRV-Cross"]
+	path = external/SPIRV-Cross
+	url = https://github.com/KhronosGroup/SPIRV-Cross.git
