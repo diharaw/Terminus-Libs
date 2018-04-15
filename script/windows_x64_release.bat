@@ -65,7 +65,7 @@ rem ---------------------------------------------------
 cd projects
 mkdir luajit
 cd luajit
-cmake "../../external/luajit" -G "Visual Studio 15 Win64"
+cmake -DBUILD_SHARED_LIBS=OFF "../../external/luajit" -G "Visual Studio 15 Win64"
 cd ..
 cd ..
 
@@ -78,7 +78,7 @@ rem ---------------------------------------------------
 cd projects
 mkdir assimp
 cd assimp
-cmake "../../external/assimp" -G "Visual Studio 15 Win64"
+cmake -DASSIMP_BUILD_TESTS=OFF -DBUILD_SHARED_LIBS=OFF "../../external/assimp" -G "Visual Studio 15 Win64"
 cd ..
 cd ..
 
